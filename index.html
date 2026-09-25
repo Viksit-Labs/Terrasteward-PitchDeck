@@ -881,6 +881,12 @@
       border-color: var(--green)
     }
 
+    .mile.now .dot {
+      background: linear-gradient(90deg, var(--green) 50%, var(--surface) 50%);
+      border-color: var(--green);
+      box-shadow: 0 0 0 4px color-mix(in srgb, var(--green) 25%, transparent)
+    }
+
     .mile .when {
       font-family: var(--f-mono);
       font-size: 10px;
@@ -1415,10 +1421,10 @@
 
     <header class="hero" id="top">
       <video autoplay muted loop playsinline preload="metadata" poster="images/clip_hero.jpg"
-        aria-label="The Terrasteward island: a lush procedural 3D diorama of forest, a winding river and coastline seen from an isometric angle in warm morning light, with flocks of birds and clouds drifting across it.">
+        aria-label="The Terrasteward island at dawn seen from a distance: a lush 3D diorama of forest, a winding river and coastline in warm morning light.">
         <source src="video/hero.mp4" type="video/mp4">
         <img src="images/clip_hero.jpg"
-          alt="The Terrasteward island: a lush procedural 3D diorama of forest, a winding river and coastline seen from an isometric angle in warm morning light.">
+          alt="The Terrasteward island at dawn seen from a distance.">
       </video>
       <div class="scrim"></div>
       <div class="hero-inner">
@@ -1433,9 +1439,9 @@
           <span>Windows PC</span>
         </div>
         <div class="hero-cta">
-          <a class="btn btn-primary" href="https://oshin94.itch.io/terrasteward-demo" target="_blank" rel="noopener">▶
+          <a class="btn btn-primary" href="https://oshin94.itch.io/terrasteward-alpha" target="_blank" rel="noopener">▶
             Play demo build (Itch.io)</a>
-          <a class="btn btn-watch" href="https://youtu.be/K1OdcMHnBjA" target="_blank" rel="noopener">▶ Watch
+          <a class="btn btn-watch" href="https://youtu.be/bsbvY-hJudM" target="_blank" rel="noopener">▶ Watch
             gameplay</a>
           <a class="btn btn-ghost" href="#partner">What we're asking for ↓</a>
         </div>
@@ -1466,15 +1472,15 @@
         </div>
         <div class="fact-row">
           <dt>Platforms</dt>
-          <dd><b>Windows PC</b>: Steam &amp; itch.io</dd>
+          <dd><b>Windows PC</b> first (Steam &amp; itch.io); open to a mobile release</dd>
         </div>
         <div class="fact-row">
           <dt>Status</dt>
-          <dd><b>Playable demo</b>: one five-year term, end to end</dd>
+          <dd><b>Playable demo</b>: three five-year terms, 60 quarters, end to end</dd>
         </div>
         <div class="fact-row">
           <dt>Session</dt>
-          <dd>A full mandate in a sitting; situation and run-based replayability</dd>
+          <dd>A full run in about an hour; situation and run-based replayability</dd>
         </div>
         <div class="fact-row">
           <dt>Studio</dt>
@@ -1484,12 +1490,12 @@
         </div>
         <div class="fact-row">
           <dt>Demo</dt>
-          <dd><a href="https://oshin94.itch.io/terrasteward-demo" target="_blank" rel="noopener">Playable build ↗</a>
+          <dd><a href="https://oshin94.itch.io/terrasteward-alpha" target="_blank" rel="noopener">Playable build ↗</a>
             Itch.io (reach out to contact for password)</dd>
         </div>
         <div class="fact-row">
           <dt>Gameplay</dt>
-          <dd><a href="https://youtu.be/K1OdcMHnBjA" target="_blank" rel="noopener">Watch on YouTube ↗</a></dd>
+          <dd><a href="https://youtu.be/bsbvY-hJudM" target="_blank" rel="noopener">Watch on YouTube ↗</a></dd>
         </div>
       </dl>
 
@@ -1530,8 +1536,8 @@
         <article class="card">
           <div class="k">Unique selling point</div>
           <h3>A mandate, not a score screen</h3>
-          <p>You don't lose on a stat tripwire. You serve a fixed term and face a council review that renews, or ends,
-            your stewardship based on four factions' trust. Consequence is political.</p>
+          <p>You don't lose on a stat tripwire. You serve three five-year terms. At the end of each, the islanders vote on your mandate, weighing four factions'
+            trust. Consequence is political.</p>
         </article>
         <article class="card">
           <div class="k">Unique selling point</div>
@@ -1556,12 +1562,12 @@
           </div>
           <div class="step"><span class="n"></span>
             <div><b>Act within limits</b>
-              <p>Spend limited quarterly actions: place builds, pass sponsored bills, negotiate with the council.</p>
+              <p>Spend a few actions each quarter: build, work the land, and fund the Research House to unlock upgrades.</p>
             </div>
           </div>
           <div class="step"><span class="n"></span>
             <div><b>Resolve the crisis</b>
-              <p>Risk-driven events, weighted by your actual pressures, each a visible trade-off.</p>
+              <p>Wildfire, flood, drought and more strike at least once a year. Each is a visible trade-off, and the Elder warns you first.</p>
             </div>
           </div>
           <div class="step"><span class="n"></span>
@@ -1570,8 +1576,8 @@
             </div>
           </div>
           <div class="step finale"><span class="n"></span>
-            <div><b>Face the five-year review</b>
-              <p>The council weighs faction trust and decides whether your mandate holds.</p>
+            <div><b>Face the islanders' vote</b>
+              <p>Every five years the islanders vote on whether your mandate holds. Three terms, one legacy.</p>
             </div>
           </div>
         </div>
@@ -1601,8 +1607,8 @@
           </video>
           <div class="body">
             <div class="lbl">Main menu</div>
-            <h4>The island is the menu</h4>
-            <p>No static splash; your living Verdania is the first thing a player sees, and the last thing they leave.
+            <h4>The island is the interface</h4>
+            <p>No static splash; the living island is the first thing a player sees, and the last thing they leave.
             </p>
           </div>
         </figure>
@@ -1627,43 +1633,47 @@
           <div class="body">
             <div class="lbl">Island systems map</div>
             <h4>Trace every consequence</h4>
-            <p>One connected graph of builds, vitals, factions and money. Hover a node to isolate exactly what it feeds:
-              the game's depth made legible.</p>
+            <p>One connected graph of builds, vitals, factions and money. Hover a node to isolate exactly what it feeds,
+              or switch to Resource Streams to follow food, water and energy.</p>
           </div>
         </figure>
         <figure class="tile">
-          <video autoplay muted loop playsinline preload="none" poster="images/clip_policies.jpg"
-            aria-label="The Policy Cabinet: four faction-sponsored bills being read and passed.">
-            <source src="video/policies.mp4" type="video/mp4">
-            <img src="images/clip_policies.jpg" alt="The Policy Cabinet with four bills.">
+          <video autoplay muted loop playsinline preload="none" poster="images/clip_research.jpg"
+            aria-label="The Research House: a tree of upgrades, each fruit funded to unlock a new build or a better crop.">
+            <source src="video/research.mp4" type="video/mp4">
+            <img src="images/clip_research.jpg" alt="The Research House upgrade tree.">
           </video>
           <div class="body">
-            <div class="lbl">Policy cabinet</div>
-            <h4>Every bill is a favour</h4>
-            <p>Faction-sponsored policies with honest trade-offs. Passing one is a debt of goodwill the council
-              remembers at review time.</p>
+            <div class="lbl">Research House</div>
+            <h4>Grow the tree, grow the island</h4>
+            <p>Fund one project at a time: water-wise crops, new tree species, Eco huts, Agrivoltaics, Bioleaching.
+              Each upgrade changes how you can build.</p>
           </div>
         </figure>
         <figure class="tile">
           <video autoplay muted loop playsinline preload="none" poster="images/clip_crisis.jpg"
-            aria-label="A council crisis: three response cards being weighed, each showing what it costs and what it mends.">
+            aria-label="A flood: the river swells over the land, then a card offers three responses.">
             <source src="video/crisis.mp4" type="video/mp4">
-            <img src="images/clip_crisis.jpg" alt="A council crisis with three response cards.">
+            <img src="images/clip_crisis.jpg" alt="A flood: the river swells over the land, then a card offers three responses.">
           </video>
           <div class="body">
-            <div class="lbl">Council crisis</div>
+            <div class="lbl">Crisis</div>
             <h4>No walking away</h4>
-            <p>Risk-driven events force a choice between three responses, each with its ripple across systems and
-              factions shown up front.</p>
+            <p>Watch a flood rise, then choose one of three responses. Wildfire, drought, blackout, rats, wolves and birds
+              strike too: at least one a year, each with its ripple shown up front.</p>
           </div>
         </figure>
         <figure class="tile">
-          <img src="images/g_advisor.jpg" alt="The Elder advisor chat overlay.">
+          <video autoplay muted loop playsinline preload="none" poster="images/clip_bridge.jpg"
+            aria-label="The Bridge License card: the Elder announces a gift of trust and the bridge is offered.">
+            <source src="video/bridge.mp4" type="video/mp4">
+            <img src="images/clip_bridge.jpg" alt="The Bridge License card: the Elder announces a gift of trust and the bridge is offered.">
+          </video>
           <div class="body">
             <div class="lbl">The Elder · advisor</div>
             <h4>Guidance in plain words</h4>
-            <p>Right-click almost anything to ask a warm, in-world advisor why a system is moving and what to do:
-              onboarding without a wall of tutorial text.</p>
+            <p>A warm, in-world elder walks you through the first quarters and marks each gift of trust, like the license
+              to cross the rivers: onboarding without a wall of tutorial text.</p>
           </div>
         </figure>
         <figure class="tile">
@@ -1675,8 +1685,8 @@
           <div class="body">
             <div class="lbl">The living world</div>
             <h4>Night, weather &amp; fireflies</h4>
-            <p>A full day/night cycle and weather, plus fireflies whose numbers rise and fall as a living gauge of the
-              island's ecological health.</p>
+            <p>A full day/night cycle and weather. Late at night, from 8 pm to 3 am, faint fireflies glow among the
+              trees when you zoom in, a living gauge of the island's ecological health.</p>
           </div>
         </figure>
         <figure class="tile">
@@ -1688,7 +1698,7 @@
           <div class="body">
             <div class="lbl">The financial ledger</div>
             <h4>Maintain your account</h4>
-            <p>See how well your country is doing economically by looking at the line chart or shankey plots.</p>
+            <p>Follow income, costs and debt on the trend chart, with a budget ledger of every source.</p>
           </div>
         </figure>
         <figure class="tile">
@@ -1700,8 +1710,82 @@
           <div class="body">
             <div class="lbl">Village Demographics</div>
             <h4>Watch your population</h4>
-            <p>Monitor your birth and death rates, maintain a balanced growth to prevent over population or decline in
-              population.</p>
+            <p>Watch births, deaths and each faction's needs, and keep growth balanced so the village neither crowds nor
+              shrinks.</p>
+          </div>
+        </figure>
+        <figure class="tile">
+          <img src="images/g_goals.jpg" alt="The Elder's Counsel goals panel under a lush island, with build palette and fieldwork on the right.">
+          <div class="body">
+            <div class="lbl">Goals &amp; fieldwork</div>
+            <h4>Always something to aim for</h4>
+            <p>The Elder's Counsel sets short goals, from mixed forests to shared sun. Farms, pasture, a RAS fishery and
+              fieldwork like controlled burns and surveys give you ways to reach them.</p>
+          </div>
+        </figure>
+        <figure class="tile">
+          <video autoplay muted loop playsinline preload="none" poster="images/clip_build.jpg"
+            aria-label="Placing a Pioneer tree, a pond, a RAS fishery and a windmill on the island and watching each one grow in.">
+            <source src="video/build.mp4" type="video/mp4">
+            <img src="images/clip_build.jpg" alt="Placing a Pioneer tree, a pond, a RAS fishery and a windmill on the island and watching each one grow in.">
+          </video>
+          <div class="body">
+            <div class="lbl">Building</div>
+            <h4>Place it, watch it grow</h4>
+            <p>Pick a spot on the island and place a Pioneer tree, pond, RAS fishery or windmill. It rises in the
+              time-lapse, and the land around it responds.</p>
+          </div>
+        </figure>
+        <figure class="tile">
+          <video autoplay muted loop playsinline preload="none" poster="images/clip_streams.jpg"
+            aria-label="Resource Streams: a Sankey of food grown by farm and pasture cells against what the island eats.">
+            <source src="video/streams.mp4" type="video/mp4">
+            <img src="images/clip_streams.jpg" alt="Resource Streams: a Sankey of food grown by farm and pasture cells against what the island eats.">
+          </video>
+          <div class="body">
+            <div class="lbl">Resource streams</div>
+            <h4>Follow the food</h4>
+            <p>A Sankey chart shows where food, water and energy come from and where it goes, so shortages and
+              surpluses have a visible cause.</p>
+          </div>
+        </figure>
+        <figure class="tile">
+          <video autoplay muted loop playsinline preload="none" poster="images/clip_cashflow.jpg"
+            aria-label="Coin Streams: a Sankey of income and upkeep beside the budget ledger.">
+            <source src="video/cashflow.mp4" type="video/mp4">
+            <img src="images/clip_cashflow.jpg" alt="Coin Streams: a Sankey of income and upkeep beside the budget ledger.">
+          </video>
+          <div class="body">
+            <div class="lbl">Coin streams</div>
+            <h4>Follow the money</h4>
+            <p>The financial ledger draws every coin earned and spent as a Sankey, next to the budget ledger and debt
+              repayment controls.</p>
+          </div>
+        </figure>
+        <figure class="tile">
+          <video autoplay muted loop playsinline preload="none" poster="images/clip_vote.jpg"
+            aria-label="The Islanders Vote: each islander casts a ballot, the tally fills and the mandate is renewed.">
+            <source src="video/vote.mp4" type="video/mp4">
+            <img src="images/clip_vote.jpg" alt="The Islanders Vote: each islander casts a ballot, the tally fills and the mandate is renewed.">
+          </video>
+          <div class="body">
+            <div class="lbl">The islanders vote</div>
+            <h4>A mandate, earned</h4>
+            <p>Watch every islander cast a ballot. Faction trust decides the tally, and a renewed mandate earns a new
+              gift, like the license to build bridges.</p>
+          </div>
+        </figure>
+        <figure class="tile">
+          <video autoplay muted loop playsinline preload="none" poster="images/clip_legacy.jpg"
+            aria-label="The ending: Steward of Tropical Island with a legacy grade, then the Island Ledger of honours.">
+            <source src="video/legacy.mp4" type="video/mp4">
+            <img src="images/clip_legacy.jpg" alt="The ending: Steward of Tropical Island with a legacy grade, then the Island Ledger of honours.">
+          </video>
+          <div class="body">
+            <div class="lbl">Your legacy</div>
+            <h4>The island remembers</h4>
+            <p>After three terms you see the island you built, a legacy grade and a line from each faction. Open the Island
+              Ledger to read the honours you earned along the way.</p>
           </div>
         </figure>
       </div>
@@ -1716,28 +1800,29 @@
           <p><b>Water, Energy, Food, Soil, Biodiversity, Economy, Equity, Climate</b>, held in constant tension.</p>
         </div>
         <div class="m"><span class="tag">Factions ×4</span>
-          <p><b>Farmers, Corporations, Ecologists, Indigenous council</b>, each with grievances and a renewal vote.</p>
+          <p><b>Farmers, Corporations, Ecologists, Indigenous</b>, each with grievances and a renewal vote.</p>
         </div>
         <div class="m"><span class="tag">Building</span>
           <p>Free-form placement with painted valid zones, influence auras and <b>adjacency synergies</b>: forests feed
             farms, mines poison neighbours.</p>
         </div>
-        <div class="m"><span class="tag">Policy</span>
-          <p>Faction-sponsored bills each quarter, where every choice earns trust somewhere and spends it elsewhere.</p>
+        <div class="m"><span class="tag">Research</span>
+          <p>The <b>Research House</b> funds one project at a time: water-wise crops, new tree species, Eco huts,
+            Agrivoltaics, Bioleaching. Fieldwork (burns, clearing, surveys) opens new ground.</p>
         </div>
         <div class="m"><span class="tag">Economy</span>
-          <p>Quarterly credit, taxes, fluctuating export demand, upkeep, shortages and <b>debt with interest</b>.</p>
+          <p>Quarterly income, upkeep, food and water shortages, and <b>debt with interest</b>, all traceable in the ledger.</p>
         </div>
         <div class="m"><span class="tag">Crises</span>
-          <p>A dozen rural-disaster archetypes, weighted by your real pressures and resolved through trade-offs.</p>
+          <p>Seven rural disasters, at least one a year, each resolved through a trade-off. The Elder gives you a warning first.</p>
         </div>
         <div class="m"><span class="tag">Living world</span>
-          <p>Weather, day/night, wildlife, plus <b>night fireflies whose count is a living proxy for ecological
-              health</b>.</p>
+          <p>Weather, day/night, wildlife, plus <b>faint late-night fireflies (8 pm to 3 am, seen up close) as a living
+              proxy for ecological health</b>.</p>
         </div>
         <div class="m"><span class="tag">Finale</span>
-          <p><b>Journey Replay</b> rewinds the whole run on the diorama with charts and story beats. Endlessly
-            shareable.</p>
+          <p>Three islander votes, then a <b>legacy grade</b> and an Island Ledger of the moments that shaped your island.
+            Made to be shared.</p>
         </div>
       </div>
     </section>
@@ -1750,15 +1835,15 @@
         <div class="box plan-box" style="border-color:color-mix(in srgb,var(--green) 45%,var(--line))">
           <h3>Playable now: the demo <span class="pill live">Live</span></h3>
           <ul>
-            <li>One full five-year term, start to finish</li>
-            <li>Scripted tutorial, crises, policies &amp; council review</li>
-            <li>Full living diorama, advisor and Journey Replay</li>
+            <li>Three five-year terms, start to finish</li>
+            <li>Guided opening, Research House, crises &amp; islander votes</li>
+            <li>Full living diorama, the Elder and a legacy ending</li>
           </ul>
         </div>
         <div class="box plan-box">
           <h3>Full release, target <span class="pill plan">Roadmap</span></h3>
           <ul>
-            <li>The complete ten-year mandate</li>
+            <li>Deeper late game: more research, crises and difficulty</li>
             <li>Multiple biomes (two more in progress.. can be additions as DLC)</li>
             <li>Player profiles, saves, commendations &amp; deeper meta</li>
           </ul>
@@ -1768,18 +1853,18 @@
 
     <section id="roadmap">
       <div class="sec-head">
-        <p class="eyebrow">Development, roadmap &amp; financials</p><span class="rule"></span><span class="note">~5-6
+        <p class="eyebrow">Development, roadmap &amp; financials</p><span class="rule"></span><span class="note">in production now, ~5-6
           months from demo to full release</span>
       </div>
       <div class="timeline">
         <div class="line"></div>
         <div class="mile done">
-          <div class="dot"></div><span class="when">Now</span><b>Playable demo</b>
-          <p>One five-year term, end to end</p>
+          <div class="dot"></div><span class="when">Done</span><b>Playable demo</b>
+          <p>Three terms, end to end</p>
         </div>
-        <div class="mile">
-          <div class="dot"></div><span class="when">Months 1 to 3</span><b>Production</b>
-          <p>Full mandate, biomes &amp; systems</p>
+        <div class="mile now">
+          <div class="dot"></div><span class="when">Now · month 1 ending</span><b>Production</b>
+          <p>In progress: months 1 to 3, systems, content &amp; biomes</p>
         </div>
         <div class="mile">
           <div class="dot"></div><span class="when">Month 4</span><b>Content complete</b>
@@ -1791,7 +1876,7 @@
         </div>
         <div class="mile">
           <div class="dot"></div><span class="when">~Month 6</span><b>Launch</b>
-          <p>Windows PC · Steam + itch.io</p>
+          <p>Windows PC first · Steam + itch.io · mobile open</p>
         </div>
       </div>
       <div class="fin">
@@ -1806,7 +1891,7 @@
           </div>
           <div class="fig">
             <div class="l">Launch platform</div>
-            <div class="v">Windows PC</div>
+            <div class="v">Windows PC <a style="font-size: 12px;">*mobile also open</a></div>
           </div>
           <div class="fig">
             <div class="l">Funding</div>
@@ -1815,7 +1900,7 @@
         </div>
         <div>
           <p class="fin-note"><b>Revenue model.</b> Premium, one-time purchase on <b>Windows PC via Steam &amp;
-              itch.io</b>
+              itch.io</b>, with a mobile release open for discussion
             at a <b>$15</b> target price (open to discussion). Run-based
             replayability and a shareable finale support a long tail and content updates. <b>Funding support is open to
               negotiation.</b></p>
@@ -1837,7 +1922,7 @@
         </div>
         <div class="w">
           <div class="big">Built to be shared</div>
-          <p>The diorama, fireflies &amp; replay are made for screenshots, GIFs and streams.</p>
+          <p>The diorama, fireflies &amp; legacy screen are made for screenshots, GIFs and streams.</p>
         </div>
         <div class="w">
           <div class="big">Low technical risk</div>
@@ -1867,7 +1952,7 @@
           <p class="partner">Ready when you are</p>
           <h2>Let's take Terrasteward to full release.</h2>
           <p>The playable demo and full design deck are ready for hands-on evaluation today. &nbsp;<a
-              href="https://oshin94.itch.io/terrasteward-demo" target="_blank" rel="noopener">▶ Play demo build
+              href="https://oshin94.itch.io/terrasteward-alpha" target="_blank" rel="noopener">▶ Play demo build
               (Itch.io) </a></p>
         </div>
         <div class="contact">
