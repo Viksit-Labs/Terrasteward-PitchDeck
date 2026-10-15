@@ -514,9 +514,15 @@
 
     /* ---------- GALLERY: every screen ---------- */
     .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(292px, 1fr));
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
       gap: 16px
+    }
+
+    .gallery>.tile {
+      flex: 0 1 calc((100% - 32px) / 3 - 1px);
+      min-width: 292px
     }
 
     .tile {
@@ -1666,15 +1672,27 @@
         </figure>
         <figure class="tile">
           <video autoplay muted loop playsinline preload="none" poster="images/clip_crisis.jpg"
-            aria-label="Wildfire breaks out on the island, then a card offers three responses.">
+            aria-label="A bird flock and a blackout strike: event cards with no way to defend, only a choice of how to respond.">
             <source src="video/crisis.mp4" type="video/mp4">
-            <img src="images/clip_crisis.jpg" alt="A wildfire event card offering three responses.">
+            <img src="images/clip_crisis.jpg" alt="Crisis event cards for a bird flock and a blackout.">
           </video>
           <div class="body">
             <div class="lbl">Crisis</div>
             <h4>No walking away</h4>
-            <p>Watch a wildfire break out, then choose one of three responses. Flood, drought, blackout, rats, wolves and birds
-              strike too: at least one a year, each with its ripple shown up front.</p>
+            <p>Some crises cannot be fought: a flock of birds, a drought, a blackout. Each arrives as a card with its ripple
+              shown up front, and you choose how to take the hit.</p>
+          </div>
+        </figure>
+        <figure class="tile">
+          <video autoplay muted loop playsinline preload="none" poster="images/clip_defend.jpg"
+            aria-label="A wildfire breaks out and the player plays defence cards over several rounds while the factions help contain it.">
+            <source src="video/defend.mp4" type="video/mp4">
+            <img src="images/clip_defend.jpg" alt="Wildfire defence: a hand of cards played over rounds, ending in a result panel.">
+          </video>
+          <div class="body">
+            <div class="lbl">Crisis · defend</div>
+            <h4>Stand and defend</h4>
+            <p>Wolves, wildfire and more can be fought. Play cards round by round; the stronger and more trusting your factions, the more they help, and the less damage the island takes.</p>
           </div>
         </figure>
         <figure class="tile">
@@ -1717,6 +1735,18 @@
           </div>
         </figure>
         <figure class="tile">
+          <video autoplay muted loop playsinline preload="none" poster="images/clip_loans.jpg"
+            aria-label="Ask the Factions: when cash runs low, request a loan from a faction.">
+            <source src="video/loans.mp4" type="video/mp4">
+            <img src="images/clip_loans.jpg" alt="The Ask the Factions loan screen.">
+          </video>
+          <div class="body">
+            <div class="lbl">Finance · loans</div>
+            <h4>Ask the factions</h4>
+            <p>Short on cash? Ask a faction for a loan. They will fund only as much as they trust you, and repayment is a share of the debt.</p>
+          </div>
+        </figure>
+        <figure class="tile">
           <video autoplay muted loop playsinline preload="none" poster="images/clip_demographics.jpg"
             aria-label="Village Demographics: a housing ring gauge, a newcomers-versus-leavers chart, and population by faction over time.">
             <source src="video/demographics.mp4" type="video/mp4">
@@ -1740,6 +1770,18 @@
             <h4>Always something to aim for</h4>
             <p>The Elder's Counsel turns faction demand into short goals, from mixed forests to shared sun. Farms, pasture, a RAS fishery and
               fieldwork like controlled burns and surveys give you ways to reach them.</p>
+          </div>
+        </figure>
+        <figure class="tile">
+          <video autoplay muted loop playsinline preload="none" poster="images/clip_manifesto.jpg"
+            aria-label="The Manifesto: promises made to each faction, then a pledge dialog.">
+            <source src="video/manifesto.mp4" type="video/mp4">
+            <img src="images/clip_manifesto.jpg" alt="The Manifesto screen with a promise per faction.">
+          </video>
+          <div class="body">
+            <div class="lbl">Manifesto</div>
+            <h4>Promises have consequences</h4>
+            <p>Make a promise to each faction. Keep it and their trust grows; break it and trust falls.</p>
           </div>
         </figure>
         <figure class="tile">
@@ -1776,7 +1818,7 @@
           </video>
           <div class="body">
             <div class="lbl">Resource streams</div>
-            <h4>Follow the food</h4>
+            <h4>Follow the resource</h4>
             <p>A Sankey chart shows where food, water and energy come from and where it goes, so shortages and
               surpluses have a visible cause.</p>
           </div>
