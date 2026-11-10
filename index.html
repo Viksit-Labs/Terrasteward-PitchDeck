@@ -2029,7 +2029,7 @@ details.more summary{cursor:pointer;font:600 12px var(--f-mono);letter-spacing:.
     // Click any gallery shot to open it full size. The tile keeps its own muted loop; the
     // overlay gets a fresh copy WITH controls so a publisher can scrub or pause it.
     (function () {
-      var shots = document.querySelectorAll('.tile > video, .tile > img, .shot > video, .shot > img');
+      var shots = document.querySelectorAll('.tile > video, .tile > img, .shot > video, .shot > img, .simpair figure > video');
       if (!shots.length) return;
 
       var box = document.createElement('div');
@@ -2048,7 +2048,7 @@ details.more summary{cursor:pointer;font:600 12px var(--f-mono);letter-spacing:.
           var h = tile.querySelector('h4'), p = tile.querySelector('p');
           return [h && h.textContent, p && p.textContent].filter(Boolean).join(' · ');
         }
-        var f = el.closest('.shot');
+        var f = el.closest('.shot') || el.closest('.simpair figure');
         var c = f && f.querySelector('figcaption');
         return c ? c.textContent : (el.getAttribute('aria-label') || el.alt || '');
       }
@@ -2059,7 +2059,7 @@ details.more summary{cursor:pointer;font:600 12px var(--f-mono);letter-spacing:.
         var big;
         if (el.tagName === 'VIDEO') {
           big = document.createElement('video');
-          big.src = el.currentSrc || (el.querySelector('source') || {}).src;
+          big.src = el.currentSrc || el.getAttribute('src') || el.getAttribute('data-src') || (el.querySelector('source') || {}).src;
           big.poster = el.poster; big.controls = true; big.loop = true;
           big.muted = true; big.autoplay = true; big.playsInline = true;
           big.setAttribute('playsinline', '');
