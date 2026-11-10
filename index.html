@@ -1396,7 +1396,7 @@
 
       html,
       body {
-        overflow-x: hidden
+        overflow-x: clip
       }
     }
   </style>
@@ -2132,7 +2132,7 @@ v.addEventListener("timeupdate",function(){k.textContent=v.currentTime<18?"Tropi
 var links=[].slice.call(document.querySelectorAll(".stepbar a")),stp=[].slice.call(document.querySelectorAll(".stp"));
 function spy(){var cur=0;stp.forEach(function(s,i){if(s.getBoundingClientRect().top<=110)cur=i});
 var inb=document.getElementById("screens").getBoundingClientRect();var on=inb.top<=110&&inb.bottom>110;
-links.forEach(function(a,i){a.classList.toggle("on",on&&i==cur)})}
+links.forEach(function(a,i){var was=a.classList.contains("on"),now=on&&i==cur;a.classList.toggle("on",now);if(now&&!was){var bar=a.parentElement;if(bar.scrollWidth>bar.clientWidth)bar.scrollTo({left:a.offsetLeft-(bar.clientWidth-a.offsetWidth)/2,behavior:"smooth"})}})}
 addEventListener("scroll",spy,{passive:true});spy()})();
 </script><script>
 (function(){
